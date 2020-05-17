@@ -21,5 +21,6 @@ const {
       '@': path.resolve(__dirname, 'src'),
       '@@': path.resolve(__dirname, 'src/page'),
       '@@@': path.resolve(__dirname, 'src/components'),
+      '@@@@': path.resolve(__dirname, 'public'),
     })
   )

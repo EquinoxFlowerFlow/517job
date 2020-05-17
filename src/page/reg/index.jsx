@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
+import { post } from '@/utils/request'
+import api from '@/services/api'
 import "./styles.less"
 
 export default @Form.create({
@@ -17,7 +19,14 @@ class Reg extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        post(api.reg, values).then(res => {
+          if (res.info == "注册成功") {
+            alert(res.info);
+            this.props.history.push('/login')
+          }else{
+            alert(res.info);
+          }
+        })
       }
     });
   };

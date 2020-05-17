@@ -1,12 +1,24 @@
 import React, { Component } from 'react'
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
+import { post } from '@/utils/request'
+import api from '@/services/api'
+import { connect } from 'react-redux'
+import { loginUsername } from '@/action/loginAction'
 import "./styles.less"
 
-export default @Form.create({
+export default @connect(state => {
+  return {
+    username: state.loginReducers.username
+  }
+},{
+  loginUsername,
+})
+
+@Form.create({
   // 表单回填使用
   mapPropsToFields ({ username, password }) {
     return {
-
+      
     }
   },
 })
@@ -16,7 +28,14 @@ class Login extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        post(api.login,values).then(res => {
+          if (res.status == 200) {
+            this.props.loginUsername(values)
+            this.props.history.push('/home')
+          }else{
+            alert(res.message)
+          }
+        })
       }
     });
   };

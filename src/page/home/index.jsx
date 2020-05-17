@@ -1,10 +1,26 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import Header from '@@@/Header'
 
-export default class Home extends Component {
+export default @connect(state => {
+  return {
+    username: state.loginReducers.username
+  }
+},{
+
+})
+
+class Home extends Component {
+  componentDidMount () {
+    if (!this.props.username) {
+      this.props.history.push('/login')
+    }
+  }
   render() {
+    const { username } = this.props
     return (
       <div>
-        这是主页页面
+        <Header username={username} />
       </div>
     )
   }

@@ -27,10 +27,12 @@ class Pagping extends Component {
         <div>
           {
             pagping.map(item => {
-              return <dl key={item.id}>
-                  <dt>{item.title}</dt>
-                  <dd>{item.tags}</dd>
-              </dl>
+              return <div key={item.id}>
+                  <dl>
+                    <dt>{item.title}</dt>
+                    <dd>{item.tags}</dd>
+                </dl>
+              </div>
             })
           }
         </div>

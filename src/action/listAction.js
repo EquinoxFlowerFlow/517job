@@ -1,6 +1,6 @@
 import { get } from '@/utils/request';
 import api from '@/services/api';
-import { TECH_LIST } from '../constants/actionName'
+import { TECH_LIST } from '@/constants/actionName'
 
 
 export function listData (options) {

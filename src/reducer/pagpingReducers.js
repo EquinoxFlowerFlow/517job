@@ -1,3 +1,5 @@
+import { TECH_PAGPING } from '@/constants/actionName'
+
 const LoginDefault = {
   data: [],
   count: 0
@@ -5,7 +7,7 @@ const LoginDefault = {
 
 export default function Pagping (state = LoginDefault, action) {
   switch(action.type) {
-    case 'TECH_PAGPING':
+    case TECH_PAGPING:
       return {...state,data: action.payload.result.list, count: action.payload.result.count }
     default:
       return state

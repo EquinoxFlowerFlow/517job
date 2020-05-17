@@ -1,4 +1,4 @@
-import { TECH_LOGIN } from '../constants/actionName'
+import { TECH_LOGIN } from '@/constants/actionName'
 
 
 export function loginUsername (options) {

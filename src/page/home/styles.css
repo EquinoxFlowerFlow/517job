@@ -1,0 +1,21 @@
+.Home {
+  width: 100%;
+  height: 900px;
+}
+.Home section {
+  height: 100%;
+}
+.Home section .ant-layout-sider-dark {
+  background: none;
+}
+.Home section .ant-layout-sider-dark div {
+  height: 100%;
+}
+.Home section .ant-layout-sider-dark div ul {
+  height: 100%;
+  background: linear-gradient(#621485, #bf2965);
+  color: white;
+}
+.Home section .ant-layout-sider-dark div ul li a {
+  color: red;
+}

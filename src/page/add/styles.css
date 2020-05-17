@@ -1,0 +1,15 @@
+.Add {
+  width: 60%;
+  height: 600px;
+  background: white;
+  margin: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.Add p {
+  font-weight: bold;
+  font-size: 18px;
+}
+.Add form .ant-form-item-label {
+  line-height: 20px;
+}

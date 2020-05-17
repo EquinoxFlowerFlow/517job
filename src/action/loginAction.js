@@ -1,9 +1,9 @@
-import { post } from '@/utils/request';
-import api from '@/services/api';
+import { TECH_LOGIN } from '../constants/actionName'
+
 
 export function loginUsername (options) {
   return {
-    type: 'TECH_LOGIN',
+    type: TECH_LOGIN,
     payload: options
   }
 }

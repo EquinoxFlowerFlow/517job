@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Table, Divider, Tag } from 'antd'
+import { Button, Table } from 'antd'
 import { connect } from 'react-redux'
 import { listData } from '@/action/listAction'
 import './styles.less'

@@ -6,7 +6,7 @@ import './styles.less'
 
 export default @Form.create({
   // 表单回填使用
-  mapPropsToFields ({ username, password }) {
+  mapPropsToFields () {
     return {
       
     }

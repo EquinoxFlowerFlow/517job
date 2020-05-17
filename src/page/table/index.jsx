@@ -66,13 +66,16 @@ class Tablee extends Component {
   }
   render() {
     const { users } = this.props
-    console.log(users)
     return (
       <div className="Tablee">
         <div className="BiaoDan">
           <p>Striped Table</p>
           <p>Add class .table-striped <Button>Add User</Button></p>
-          <Table columns={columns} dataSource={users} />
+          <Table 
+            columns={columns} 
+            dataSource={users} 
+            rowKey={v => v.id}
+          />
         </div>
       </div>
     )

@@ -6,7 +6,7 @@ import { persistReducer } from 'redux-persist' // 合并 reduce
 import storage from 'redux-persist/lib/storage' // 创建 store
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
 
-import { loginReducers, list } from './reducer'
+import { loginReducers, list, pagping } from './reducer'
 
 const rootPersistConfig = {
   key: 'root',
@@ -22,6 +22,7 @@ const myPersistReducer = persistReducer(
   combineReducers({
     loginReducers,
     list,
+    pagping,
   })
 )
 

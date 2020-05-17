@@ -1,0 +1,17 @@
+.Reg {
+  width: 100%;
+  height: 900px;
+  background: url('../../asseccts/backgroundOne.png') 100% 100%;
+}
+.Reg .Reg_B_D {
+  width: 400px;
+  background: pink;
+  float: right;
+  margin-top: 50px;
+  margin-right: 100px;
+  padding: 50px;
+}
+.Reg .Reg_B_D p:nth-child(1) {
+  font-weight: bold;
+  font-size: 25px;
+}
